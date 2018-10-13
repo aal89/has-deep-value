@@ -1,0 +1,41 @@
+{
+  "name": "has-deep-value",
+  "version": "1.0.0",
+  "description": "An utility function to check if any arbitrary object has any property on any deep level.",
+  "main": "has-deep-value.js",
+  "scripts": {
+    "test": "clear && mocha *.spec.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aal89/has-deep-value.git"
+  },
+  "keywords": [
+    "javascript",
+    "has",
+    "deep",
+    "property",
+    "value",
+    "lightweight",
+    "small",
+    "object",
+    "dot",
+    "notation",
+    "path",
+    "no",
+    "zero",
+    "dependencies",
+    "curry",
+    "curried"
+  ],
+  "author": "Alex",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aal89/has-deep-value/issues"
+  },
+  "homepage": "https://github.com/aal89/has-deep-value#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0"
+  }
+}
