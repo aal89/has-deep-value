@@ -1,1 +1,1 @@
-module.exports={func:(o,k)=>k.split(".").reduce((a,c)=>a.hasOwnProperty(c)?a[c]||1:false,Object.assign({},o))===false?false:true,curried:(k)=>(o)=>module.exports.func(o,k)}
+module.exports={hasDeepValue:(o,k)=>k.split(".").reduce((a,c)=>a.hasOwnProperty(c)?a[c]||1:false,Object.assign({},o))===false?false:true,has:(k)=>(o)=>module.exports.hasDeepValue(o,k)}
