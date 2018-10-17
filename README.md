@@ -29,12 +29,12 @@ Accounts for all values, including all falsey values, e.g.:
 
 ### Typescript
 
-Included is an `index.d.ts` file Typescript should automatically pick this file up and apply the typings across your codebase.
+Included is an `index.d.ts` file, Typescript should automatically pick this file up and apply the typings across your codebase.
 
 ```typescript
 import { hasDeepValue, has } from "has-deep-value";
  
-hasDeepValue({ hello: 'world' }, 'hello'); //-> true
+hasDeepValue({ hello: "world" }, "hello"); //-> true
 ```
 
 ### Examples
