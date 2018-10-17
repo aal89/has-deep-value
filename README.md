@@ -1,6 +1,6 @@
 # has-deep-value
 
-Very small (only **172 bytes**), lightweight, tested and dependency free utility function to (deeply) inspect Javascript objects. With **has-deep-value** you can easily check if any object contains a given property at any level deep, accounts for falsey values too. Also includes a curried version and supports object path (dot notation) to keep things clear.
+Very small (only **184 bytes**), lightweight, tested and dependency free utility function to (deeply) inspect Javascript objects. With **has-deep-value** you can easily check if any object contains a given property at any level deep, accounts for falsey values too. Also includes a curried version and supports object path (dot notation) to keep api usage clear.
 
 ## Install
 
@@ -10,10 +10,10 @@ $ npm install --save has-deep-value
 
 ## Usage
 
-*Note: use **.func** for the normal function and **.curried** for the curried version*
+*Note: use **.hasDeepValue** for the normal function and **.has** for the curried version*
 
 ```javascript
-const hasDeepValue = require('has-deep-value').func;
+const hasDeepValue = require('has-deep-value').hasDeepValue;
  
 hasDeepValue({ hello: 'world' }, 'hello'); //-> true
 ```
@@ -27,9 +27,19 @@ Accounts for all values, including all falsey values, e.g.:
 * `undefined`
 * `null`
 
-## Examples
+### Typescript
 
-### Default
+Included is an `index.d.ts` file Typescript should automatically pick this file up and apply the typings across your codebase.
+
+```typescript
+import { hasDeepValue, has } from "has-deep-value";
+ 
+hasDeepValue({ hello: 'world' }, 'hello'); //-> true
+```
+
+### Examples
+
+#### Default
 
 ```js
 hasDeepValue({ hello: 'world' }, 'hello'); //-> true
@@ -48,11 +58,11 @@ hasDeepValue(NaN, 'world'); //-> false
 hasDeepValue(() => {}, 'f'); //-> false
 ```
 
-### Functional
+#### Functional
 
 ```js
-const hasDeepValue = require('has-deep-value').curried;
-const hasHelloWorld = hasDeepValue('hello.world');
+const has = require('has-deep-value').has;
+const hasHelloWorld = has('hello.world');
 ```
 
 ```js
@@ -66,6 +76,10 @@ hasHelloWorld({ helloworld: '' }); //-> false
 const objects = [{...}, {...}, {...}];
 // Check if all objects conform to { hello: { world: '' } }
 if (objects.map(hasHelloWorld).every(e => e)) {
+    ...
+}
+// A different example
+if (objects.map(has('account.profile.image')).every(e => e)) {
     ...
 }
 ```

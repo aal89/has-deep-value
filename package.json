@@ -26,7 +26,8 @@
     "zero",
     "dependencies",
     "curry",
-    "curried"
+    "curried",
+    "typescript"
   ],
   "author": "Alex",
   "license": "MIT",
