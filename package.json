@@ -1,10 +1,10 @@
 {
   "name": "has-deep-value",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "An utility function to check if any arbitrary object has any property on any deep level.",
   "main": "has-deep-value.js",
   "scripts": {
-    "test": "clear && mocha *.spec.js"
+    "test": "clear && mocha ./tests/*.spec.js"
   },
   "repository": {
     "type": "git",

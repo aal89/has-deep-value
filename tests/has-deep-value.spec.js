@@ -1,6 +1,6 @@
 var expect = require('chai').expect;
-var hasDeepValue = require('./has-deep-value.js').func;
-var hasDeepValueC = require('./has-deep-value.js').curried;
+var hasDeepValue = require('../has-deep-value.js').hasDeepValue;
+var has = require('../has-deep-value.js').has;
 
 describe('has-deep-property', () => {
   let obj = {
@@ -32,7 +32,7 @@ describe('has-deep-property', () => {
       }
     }
   };
-  let hasHelloWorld = hasDeepValueC('hello.world');
+  let hasHelloWorld = has('hello.world');
   it('curries', () => {
     expect([{hello:{world:''}}, {hello:{world:''}}].map(hasHelloWorld).every(e => e)).to.equal(true);
     expect([{hello:{world:''}}, {bye:{world:''}}].map(hasHelloWorld).every(e => e)).to.equal(false);
