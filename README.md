@@ -35,6 +35,7 @@ Included is an `index.d.ts` file, Typescript should automatically pick this file
 import { hasDeepValue, has } from "has-deep-value";
  
 hasDeepValue({ hello: "world" }, "hello"); //-> true
+has("hello.world")({ hello: { world: "" } }); //-> true
 ```
 
 ### Examples
