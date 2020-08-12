@@ -37,6 +37,6 @@
   "homepage": "https://github.com/aal89/has-deep-value#readme",
   "devDependencies": {
     "chai": "^4.2.0",
-    "mocha": "^5.2.0"
+    "mocha": "^8.1.1"
   }
 }
