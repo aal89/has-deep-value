@@ -1,6 +1,6 @@
 {
   "name": "has-deep-value",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "An utility function to check if any arbitrary object has any property on any deep level.",
   "main": "has-deep-value.js",
   "scripts": {

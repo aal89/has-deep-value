@@ -2,7 +2,7 @@ var expect = require('chai').expect;
 var hasDeepValue = require('../has-deep-value.js').hasDeepValue;
 var has = require('../has-deep-value.js').has;
 
-describe('has-deep-property', () => {
+describe('has-deep-value', () => {
   let obj = {
     test: '',
     test2: false,
@@ -14,7 +14,7 @@ describe('has-deep-property', () => {
     test8: 100,
     test9: [undefined],
     test10: new Error(),
-    test11: new Buffer('123'),
+    test11: Buffer.from('123'),
     locals: {
       test: '',
       test2: false,
@@ -26,7 +26,7 @@ describe('has-deep-property', () => {
       test8: 100,
       test9: [undefined],
       test10: new Error(),
-      test11: new Buffer('123'),
+      test11: Buffer.from('123'),
       auth: {
         user: 'hw'
       }
@@ -44,7 +44,7 @@ describe('has-deep-property', () => {
     expect(hasDeepValue(null, 'null')).to.equal(false);
     expect(hasDeepValue(undefined, 'false')).to.equal(false);
     expect(hasDeepValue([], 'false')).to.equal(false);
-    expect(hasDeepValue(new Buffer('123'), 'false')).to.equal(false);
+    expect(hasDeepValue(Buffer.from('123'), 'false')).to.equal(false);
     expect(hasDeepValue(NaN, 'false')).to.equal(false);
     expect(hasDeepValue(0, 'false')).to.equal(false);
     expect(hasDeepValue(() => {}, 'false')).to.equal(false);
@@ -96,4 +96,9 @@ describe('has-deep-property', () => {
     expect(hasDeepValue(obj, 'locals.authh.')).to.equal(false);
     expect(hasDeepValue(obj, 'locals.authh.user')).to.equal(false);
   });
+  it('handles null prototype object correctly', () => {
+    const obj = Object.create(null);
+    obj.hello = "world";
+    expect(hasDeepValue(obj, 'hello')).to.equal(true);
+  })
 });
