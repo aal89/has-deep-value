@@ -1,6 +1,6 @@
 # has-deep-value
 
-Very small (only **198 bytes**), lightweight, tested and dependency free utility function to (deeply) inspect Javascript objects. With **has-deep-value** you can easily check if any object contains a given property at any level deep, accounts for falsey values too. Also includes a curried version and supports object path (dot notation) to keep api usage clear.
+Very small (only **197 bytes**), lightweight, tested and dependency free utility function to (deeply) inspect Javascript objects. With **has-deep-value** you can easily check if any object contains a given property at any level deep, accounts for falsey values too. Also includes a curried version and supports object path (dot notation) to keep api usage clear.
 
 ## Install
 
