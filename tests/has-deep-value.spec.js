@@ -70,7 +70,7 @@ describe('has-deep-value', () => {
     expect(hasDeepValue(obj, 'test10')).to.equal(true);
     expect(hasDeepValue(obj, 'test11')).to.equal(true);
   });
-  it('handles dot notation like a pro for any level deep and falsey values', () => {
+  it('handles dot notation for any level deep and falsey values', () => {
     expect(hasDeepValue(obj, 'locals.test')).to.equal(true);
     expect(hasDeepValue(obj, 'locals.test2')).to.equal(true);
     expect(hasDeepValue(obj, 'locals.test3')).to.equal(true);
@@ -85,7 +85,7 @@ describe('has-deep-value', () => {
     expect(hasDeepValue(obj, 'locals.auth')).to.equal(true);
     expect(hasDeepValue(obj, 'locals.auth.user')).to.equal(true);
   });
-  it('handles incomplete dot notations or unknown dot notations like a pro also', () => {
+  it('handles incomplete dot notations or unknown dot notations', () => {
     expect(hasDeepValue(obj, 'locals.testt')).to.equal(false);
     expect(hasDeepValue(obj, 'locals.')).to.equal(false);
     expect(hasDeepValue(obj, 'test.testt')).to.equal(false);
