@@ -86,5 +86,5 @@ if (objects.map(has('account.profile.image')).every(e => e)) {
 ```
 
 ## License
-Copyright © 2018-2020, Alex Burghardt. Made available under the MIT license.
+Copyright © 2018-2021, Alex Burghardt. Made available under the MIT license.
 

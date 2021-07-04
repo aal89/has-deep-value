@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.2] - 2021-07-04
+### Optimization
+- Reduced filesize to 179 bytes, down from 197 bytes.
+
 ## [1.1.1] - 2020-08-12
 ### Fixed
 - Fixed a bug regarding null prototype objects. `hasOwnProperty` is now being explicitly called on `Object`.
